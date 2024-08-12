@@ -26,7 +26,7 @@ class SeriesListViewModel(application: Application) : AndroidViewModel(applicati
     fun getPopularSeries(){
         viewModelScope.launch {
             try {
-                val response = movieApiService.getDataSeriesPopular("aaaaf180f736635b6d7b6e158b4b8da0")
+                val response = movieApiService.getDataSeriesPopular("***************")
                 if (response.isSuccessful){
                     popularSeries.value= response.body()?.results
                 }else{
@@ -44,7 +44,7 @@ class SeriesListViewModel(application: Application) : AndroidViewModel(applicati
     fun getTopRatedSeries(){
         viewModelScope.launch {
             try {
-                val response = movieApiService.getDataSeriesTopRated("aaaaf180f736635b6d7b6e158b4b8da0")
+                val response = movieApiService.getDataSeriesTopRated("***************")
                 if (response.isSuccessful){
                     topRatedSeries.value= response.body()?.results
                 }else{
@@ -60,7 +60,7 @@ class SeriesListViewModel(application: Application) : AndroidViewModel(applicati
     fun getOnTheAirSeries(){
         viewModelScope.launch {
             try {
-                val response = movieApiService.getDataSeriesOnTheAir("aaaaf180f736635b6d7b6e158b4b8da0")
+                val response = movieApiService.getDataSeriesOnTheAir("***************")
                 if (response.isSuccessful){
                     onTheAirSeries.value= response.body()?.results
 
