@@ -23,7 +23,7 @@ class MovieDetailViewModel(application: Application) : AndroidViewModel(applicat
 
     fun getCastMembers(movieId: Int) {
         viewModelScope.launch {
-            val response = movieApiService.getDataCast(movieId, "a07e22bc18f5cb106bfe4cc1f83ad8ed")
+            val response = movieApiService.getDataCast(movieId, "****************")
             if (response.isSuccessful) {
                 val creditsResponse = response.body()
                 if (creditsResponse != null) {
@@ -52,7 +52,7 @@ class MovieDetailViewModel(application: Application) : AndroidViewModel(applicat
 
     fun movieTrailer(movieId: Int) {
         viewModelScope.launch {
-            val response = movieApiService.getMovieTrailer(movieId,"a07e22bc18f5cb106bfe4cc1f83ad8ed")
+            val response = movieApiService.getMovieTrailer(movieId,"****************")
             if (response.isSuccessful){
                 movieTrailer.value= response.body()?.results?.firstOrNull()
             }
