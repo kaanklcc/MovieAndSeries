@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/splashScreen">
+
+    <fragment
+        android:id="@+id/movieListFragment"
+        android:name="com.kaankilic.movieapp.View.MovieListFragment"
+        android:label="fragment_movie_list"
+        tools:layout="@layout/fragment_movie_list" >
+        <action
+            android:id="@+id/action_movieListFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+        <action
+            android:id="@+id/action_movieListFragment_to_seriesListFragment"
+            app:destination="@id/seriesListFragment" />
+        <action
+            android:id="@+id/action_movieListFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
+        <action
+            android:id="@+id/action_movieListFragment_to_kullaniciFragment"
+            app:destination="@id/kullaniciFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailFragment"
+        android:name="com.kaankilic.movieapp.View.MovieDetailFragment"
+        android:label="fragment_movie_detail"
+        tools:layout="@layout/fragment_movie_detail" >
+        <argument
+            android:name="movies"
+            app:argType="com.kaankilic.movieapp.model.MovieResult" />
+        <action
+            android:id="@+id/action_movieDetailFragment_to_movieListFragment"
+            app:destination="@id/movieListFragment" />
+        <action
+            android:id="@+id/action_movieDetailFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seriesListFragment"
+        android:name="com.kaankilic.movieapp.View.SeriesListFragment"
+        android:label="fragment_series_list"
+        tools:layout="@layout/fragment_series_list" >
+        <action
+            android:id="@+id/action_seriesListFragment_to_seriesDetailFragment"
+            app:destination="@id/seriesDetailFragment" />
+        <action
+            android:id="@+id/action_seriesListFragment_self"
+            app:destination="@id/seriesListFragment" />
+        <action
+            android:id="@+id/action_seriesListFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
+        <action
+            android:id="@+id/action_seriesListFragment_to_kullaniciFragment"
+            app:destination="@id/kullaniciFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/seriesDetailFragment"
+        android:name="com.kaankilic.movieapp.View.SeriesDetailFragment"
+        android:label="fragment_series_detail"
+        tools:layout="@layout/fragment_series_detail" >
+        <argument
+            android:name="series"
+            app:argType="com.kaankilic.movieapp.model.Result" />
+        <action
+            android:id="@+id/action_seriesDetailFragment_to_seriesListFragment"
+            app:destination="@id/seriesListFragment" />
+        <action
+            android:id="@+id/action_seriesDetailFragment_to_favouriteFragment"
+            app:destination="@id/favouriteFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouriteFragment"
+        android:name="com.kaankilic.movieapp.View.FavouriteFragment"
+        android:label="fragment_favourite"
+        tools:layout="@layout/fragment_favourite" >
+        <action
+            android:id="@+id/action_favouriteFragment_to_seriesListFragment"
+            app:destination="@id/seriesListFragment" />
+        <action
+            android:id="@+id/action_favouriteFragment_to_movieListFragment"
+            app:destination="@id/movieListFragment" />
+        <action
+            android:id="@+id/action_favouriteFragment_to_movieListFragment2"
+            app:destination="@id/movieListFragment" />
+        <action
+            android:id="@+id/action_favouriteFragment_to_seriesDetailFragment"
+            app:destination="@id/seriesDetailFragment" />
+        <action
+            android:id="@+id/action_favouriteFragment_to_movieDetailFragment"
+            app:destination="@id/movieDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kullaniciFragment"
+        android:name="com.kaankilic.movieapp.View.KullaniciFragment"
+        android:label="fragment_kullanici"
+        tools:layout="@layout/fragment_kullanici" >
+        <action
+            android:id="@+id/action_kullaniciFragment_to_movieListFragment"
+            app:destination="@id/movieListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreen"
+        android:name="com.kaankilic.movieapp.View.SplashScreen"
+        android:label="fragment_splash_screen"
+        tools:layout="@layout/fragment_splash_screen" >
+        <action
+            android:id="@+id/action_splashScreen_to_kullaniciFragment"
+            app:destination="@id/kullaniciFragment" />
+    </fragment>
+</navigation>
