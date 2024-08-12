@@ -22,7 +22,7 @@ class SeriesDetailViewModel(application: Application) : AndroidViewModel(applica
 
     fun getSeriesCast(seriesId:Int){
         viewModelScope.launch {
-            val response = movieAPIServis.getDataSeriesCast(seriesId,"aaaaf180f736635b6d7b6e158b4b8da0")
+            val response = movieAPIServis.getDataSeriesCast(seriesId,"****************")
             if (response.isSuccessful){
                 seriesCast.value= response.body()?.cast
             }else{
@@ -40,7 +40,7 @@ class SeriesDetailViewModel(application: Application) : AndroidViewModel(applica
 
     fun seriesTrailer(movieId: Int) {
         viewModelScope.launch {
-            val response = movieAPIServis.getMovieTrailer(movieId, "a07e22bc18f5cb106bfe4cc1f83ad8ed")
+            val response = movieAPIServis.getMovieTrailer(movieId, "****************")
             if (response.isSuccessful) {
                 seriesTrailer.value = response.body()?.results?.firstOrNull()
             }
