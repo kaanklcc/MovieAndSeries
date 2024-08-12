@@ -28,7 +28,7 @@ class MovieListViewModel(application: Application) : AndroidViewModel(applicatio
      fun getPopularMovies(){
         viewModelScope.launch {
             try {
-                val response = movieApiService.getDataPopular("aaaaf180f736635b6d7b6e158b4b8da0")
+                val response = movieApiService.getDataPopular("***************")
                 if (response.isSuccessful){
                     popularMovies.value= response.body()?.results
                 }else{
@@ -44,7 +44,7 @@ class MovieListViewModel(application: Application) : AndroidViewModel(applicatio
         viewModelScope.launch {
             try {
 
-                val response = movieApiService.getDataRated("aaaaf180f736635b6d7b6e158b4b8da0")
+                val response = movieApiService.getDataRated("***************")
                 if (response.isSuccessful){
                     topRatedMovies.value= response.body()?.results
 
@@ -63,7 +63,7 @@ class MovieListViewModel(application: Application) : AndroidViewModel(applicatio
 
             try {
 
-                val response = movieApiService.getDataUpcoming("aaaaf180f736635b6d7b6e158b4b8da0")
+                val response = movieApiService.getDataUpcoming("***************")
                 if (response.isSuccessful){
                     upcomingMovies.value= response.body()?.results
 
