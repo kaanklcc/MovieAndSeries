@@ -19,6 +19,7 @@ The Movies and Series App is an application developed using Kotlin in Android St
   <img src="https://github.com/kaanklcc/MovieAndSeries/blob/master/Screenshot_20240812_234340.png" width="200" />
   <img src="https://github.com/kaanklcc/MovieAndSeries/blob/master/Screenshot_20240812_234405.png" width="200" />
 </p>
+
 ## Features
 
 - **Movie and TV Show Listing:** List popular, top-rated, and upcoming movies and TV shows.
